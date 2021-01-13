@@ -3,11 +3,12 @@ import PropTypes from "prop-types";
 import styles from "./contactForm.module.css";
 
 class ContactForm extends Component {
-  static propTypes = {
-    onAddContact: PropTypes.func.isRequired,
-    name: PropTypes.string.isRequired,
-    number: PropTypes.string.isRequired,
-  };
+  // static propTypes = {
+  //   onAddContact: PropTypes.func.isRequired,
+  //   name: PropTypes.string.isRequired,
+  //   number: PropTypes.string.isRequired,
+  // };
+
   state = {
     name: "",
     number: "",
@@ -57,11 +58,8 @@ class ContactForm extends Component {
   }
 }
 
-// ContactForm.propTypes = {
-//   onAddContact: PropTypes.func.isRequired,
-//   name: PropTypes.string.isRequired,
-//   number: PropTypes.string.isRequired,
-// };
+ContactForm.propTypes = {
+  onAddContact: PropTypes.func.isRequired,
+};
 
 export default ContactForm;
-

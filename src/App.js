@@ -41,7 +41,7 @@ class App extends Component {
     } else if (item.name.length === 0 || item.number.length === 0) {
       alert("Fields must be filled!");
     } else {
-       const contact = { ...item, id: uuidv4 };
+      const contact = { id: uuidv4(), ...item };
       this.setState((prevState) => ({
         contacts: [...prevState.contacts, contact],
       }));
@@ -87,4 +87,3 @@ class App extends Component {
 }
 
 export default App;
-
